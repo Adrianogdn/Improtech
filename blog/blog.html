@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../dist/style.css">
+    <link rel="stylesheet" href="/src/style.css">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Awesome font -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/src/glightbox/css/glightbox.css">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- slick -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+
+    <title>Improtech</title>
+</head>
+
+<body class="leading-normal tracking-normal text-gray-800 bg-white blog-page" style="font-family: 'Roboto', sans-serif">
+    <nav id="header" class="fixed w-full z-30 top-0 text-gray-800 bg-white shadow">
+        <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-4 lg:px-5">
+            <div class="pl-4 flex items-center">
+                <a class="toggleColour text-gray-800 no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
+                    href="../index.html">
+
+                    <img class="fill-current h-10 md:h-10 xl:h-10 w-auto" src="../src/assets/logo.png"
+                        alt="Logo da improtech" id="logo-alt">
+
+                </a>
+            </div>
+            <div class="block lg:hidden pr-4">
+                <button id="nav-toggle"
+                    class="flex items-center p-1 text-gray-800 hover:text-gray-800 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                    <i class="fa-solid fa-bars" id="bars"></i>
+                </button>
+            </div>
+            <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white text-gray-800 p-4 lg:p-0 z-20 rounded"
+                id="nav-content">
+                <ul class="list-reset lg:flex justify-center text-center lg:justify-end flex-1 items-center">
+                    <li class="mr-3 ">
+                        <a class="inline-block py-2 px-4  text-gray-800 no-underline hover:text-gray-800 hover:text-underline uppercase navlink relative before:content-[''] before:absolute before:block before:w-full before:h-[2px] 
+                        before:bottom-0 before:left-0 before:bg-blue-800
+                        before:hover:scale-x-100 before:scale-x-0 before:origin-top-left
+                        before:transition before:ease-in-out before:duration-300" href="../index.html">Home</a>
+                    </li>
+                    <li class="mr-3">
+                        <a class="inline-block py-2 px-4  text-gray-800 no-underline hover:text-gray-800 hover:text-underline uppercase navlink relative before:content-[''] before:absolute before:block before:w-full before:h-[2px] 
+                        before:bottom-0 before:left-0 before:bg-blue-800
+                        before:hover:scale-x-100 before:scale-x-0 before:origin-top-left
+                        before:transition before:ease-in-out before:duration-300" id="navlink" href="#">Quem somos</a>
+                    </li>
+                    <li class="mr-3">
+                        <a class="inline-block py-2 px-4  text-gray-800 no-underline hover:text-gray-800 hover:text-underline uppercase navlink relative before:content-[''] before:absolute before:block before:w-full before:h-[2px] 
+                        before:bottom-0 before:left-0 before:bg-blue-800
+                        before:hover:scale-x-100 before:scale-x-0 before:origin-top-left
+                        before:transition before:ease-in-out before:duration-300" id="navlink" href="#S">Serviços</a>
+                    </li>
+                    <li class="mr-3">
+                        <a class="inline-block py-2 px-4  text-gray-800 no-underline hover:text-gray-800 hover:text-underline uppercase navlink relative before:content-[''] before:absolute before:block before:w-full before:h-[2px] 
+                        before:bottom-0 before:left-0 before:bg-blue-800
+                        before:hover:scale-x-100 before:scale-x-0 before:origin-top-left
+                        before:transition before:ease-in-out before:duration-300" id="navlink"
+                            href="blog.html">Artigos</a>
+                    </li>
+                    <li class="mr-3 border-b lg:border-none">
+                        <a class="inline-block py-2 px-4  text-gray-800 no-underline hover:text-gray-800 hover:text-underline uppercase navlink relative before:content-[''] before:absolute before:block before:w-full before:h-[2px] 
+                        before:bottom-0 before:left-0 before:bg-blue-800
+                        before:hover:scale-x-100 before:scale-x-0 before:origin-top-left
+                        before:transition before:ease-in-out before:duration-300" id="navlink" href="#">Contato</a>
+                    </li>
+                </ul>
+                <button id="navAction"
+                    class="mx-auto flex justify-center text-center items-center lg:mx-0 bg-blue-800 text-white font-bold mt-4 lg:mt-0 py-4 px-8 shadow focus:outline-none focus:shadow-outline transform transition hover:scale-110 duration-300 ease-in-out">
+                    <a href="">Fale conosco</a>
+
+                </button>
+            </div>
+        </div>
+    </nav>
+    <div class="pt-24 py-6 " id="Home">
+
+
+    </div>
+    <div class="relative -mt-12 lg:-mt-24">
+
+    </div>
+    <section class="bg-white border-b pt-20">
+        <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800 ">
+            Artigos
+        </h2>
+        <div class="w-full mb-4">
+            <div class="h-1 mx-auto bg-blue-800 w-64 my-0 py-0 rounded-t"></div>
+        </div>
+
+        <div class="flex md:flex-row flex-col gap-5 relative mt-8 mx-8">
+            <div class="flex-1 grid lg:grid-cols-3 gap-10 lg:gap-y-12 lg:gap-6">
+                <div class="my-10 bg-white rounded-xl shadow-md flex-1">
+                    <img class="mb-5" src="../src/assets/Gallery/20220610_150005.jpg" alt="">
+                    <div class="p-4 md:p-6">
+                        <div class="flex justify-between items-center"><span
+                                class="font-semibold text-gray-600 text-sm">19
+                                dez,
+                                2023</span> <span
+                                class="px-3 py-1 gradientblue text-white text-sm font-bold rounded">blog</span>
+                        </div>
+                        <div class="mt-2"><a href="/blog/artigo1.html"
+                                class="text-xl md:text-2xl text-gray-700 font-bold hover:text-gray-600">A
+                                protensão está emergindo como uma das tendências mais promissoras na construção para
+                                2024
+                            </a>
+                            <p class="mt-2 text-base lg:text-lg text-gray-700"> A protensão não é apenas uma tendência,
+                                mas uma solução crucial para atender às demandas crescentes por construções
+                                sustentáveis, seguras e eficientes.
+                            </p>
+                        </div>
+                        <div class=" mt-4"><a href="/blog/artigo1.html"
+                                class="text-primary text-blue-800 font-semibold hover:underline items-end">Leia mais</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-10 bg-white rounded-xl shadow-md flex-1">
+                    <img class="mb-5" src="../src/assets/Gallery/20220611_125227.jpg" alt="">
+                    <div class="p-4 md:p-6">
+                        <div class="flex justify-between items-center"><span
+                                class="font-semibold text-gray-600 text-sm">19
+                                dez,
+                                2023</span> <span
+                                class="px-3 py-1 gradientblue text-white text-sm font-bold rounded">blog</span>
+                        </div>
+                        <div class="mt-2"><a href="/blog/artigo2.html"
+                                class="text-xl md:text-2xl text-gray-700 font-bold hover:text-gray-600 ">A
+                                protensão transforma vantagens estruturais em realidade construtiva
+                            </a>
+                            <p class="mt-2 text-base lg:text-lg text-gray-700">O uso de concreto protendido em uma obra
+                                oferece diversas vantagens devido às
+                                propriedades específicas desse material e à técnica de protensão.
+
+                            </p>
+                        </div>
+                        <div class=" mt-4"><a href="/blog/artigo2.html"
+                                class="text-primary text-blue-800 font-semibold hover:underline items-end">Leia mais</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-10 bg-white rounded-xl shadow-md flex-1">
+                    <img class="mb-5" src="../src/assets/Gallery/20220610_145601.jpg" alt="">
+                    <div class="p-4 md:p-6">
+                        <div class="flex justify-between items-center"><span
+                                class="font-semibold text-gray-600 text-sm">19
+                                dez,
+                                2023</span> <span
+                                class="px-3 py-1 gradientblue text-white text-sm font-bold rounded">blog</span>
+                        </div>
+                        <div class="mt-2"><a href="/blog/artigo4.html"
+                                class="text-xl md:text-2xl text-gray-700 font-bold hover:text-gray-600">A
+                                Crucial Importância do Acompanhamento Técnico na Protensão
+                            </a>
+                            <p class="mt-2 text-base lg:text-lg text-gray-700">A protensão requer um acompanhamento
+                                técnico específico e altamente confiável. Aqui estão algumas razões pelas quais isso é
+                                fundamental.</p>
+                        </div>
+                        <div class=" mt-4"><a href="/blog/artigo4.html"
+                                class="text-primary text-blue-800 font-semibold hover:underline items-end">Leia mais</a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="my-10 bg-white rounded-xl shadow-md flex-1">
+                    <img class="mb-5" src="../src/assets/Gallery/20220611_165103.jpg" alt="">
+                    <div class="p-4 md:p-6">
+                        <div class="flex justify-between items-center"><span
+                                class="font-semibold text-gray-600 text-sm">19
+                                dez,
+                                2023</span> <span
+                                class="px-3 py-1 gradientblue text-white text-sm font-bold rounded">blog</span>
+                        </div>
+                        <div class="mt-2"><a href="/blog/artigo4.html"
+                                class="text-xl md:text-2xl text-gray-700 font-bold hover:text-gray-600">A
+                                Jornada pela História Fascinante da Protensão no Desenvolvimento Estrutural
+
+                            </a>
+                            <p class="mt-2 text-base lg:text-lg text-gray-700"> A ideia da protensão é antiga. As
+                                primeiras tentativas esbarravam sempre na impossibilidade de garantir tensões de
+                                compressão permanente no concreto. No início do século XX, iniciaram-se as primeiras
+                                aplicações da protensão em estruturas de concreto.</p>
+                        </div>
+                        <div class=" mt-4"><a href="/blog/artigo4.html"
+                                class="text-primary text-blue-800 font-semibold hover:underline items-end">Leia mais</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="w-1 hidden md:block border-r border-neutral-200"></div>
+            <div class="relative  lg:w-72 h-fit flex flex-col gap-10 pb-6 text-gray-800">
+                <div class="rounded-lg p-5 py-6 bg-gray-100">
+                    <h2 class="mb-8 pb-3 text-lg font-semibold border-b border-[#d4d4d4]">Postagens Recentes</h2>
+                    <div>
+                        <ul class="flex flex-col gap-5"><a class="flex items-center gap-1 border-b border-gray-300 pb-2"
+                                href="./artigo1.html"><img alt="Lorem ipsum" loading="lazy" width="50" height="50"
+                                    decoding="async" data-nimg="1"
+                                    class="rounded-full object-cover object-top w-10 h-10 aspect-auto mr-1"
+                                    src="../src/assets/Gallery/20220610_150005.jpg" style="color: transparent;">
+                                <li class="hover:text-blue-800">
+                                    <p class="text-sm">A protensão está emergindo...</p>
+                                    <p class="text-xs">19 dez, 2023</p>
+                                </li>
+                            </a><a class="flex items-center gap-1 border-b border-gray-300 pb-2"
+                                href="./artigo2.html"><img alt="Lorem ipsum" loading="lazy" width="50" height="50"
+                                    decoding="async" data-nimg="1"
+                                    class="rounded-full object-cover object-top w-10 h-10 aspect-auto mr-1"
+                                    src="../src/assets/Gallery/20220611_125227.jpg" style="color: transparent;">
+                                <li class="hover:text-blue-800">
+                                    <p class="text-sm">A protensão transforma vant...</p>
+                                    <p class="text-xs">19 dez, 2023</p>
+                                </li>
+                            </a><a class="flex items-center gap-1 border-b border-gray-300 pb-2"
+                                href="./artigo3.html"><img alt="Lorem ipsum" loading="lazy" width="50" height="50"
+                                    decoding="async" data-nimg="1"
+                                    class="rounded-full object-cover object-top w-10 h-10 aspect-auto mr-1"
+                                    src="../src/assets/Gallery/20220610_145601.jpg">
+                                <li class="hover:text-blue-800">
+                                    <p class="text-sm">A Crucial Importância do...</p>
+                                    <p class="text-xs">19 dez, 2023</p>
+                                </li>
+                            </a>
+                            </a><a class="flex items-center gap-1 border-b border-gray-300 pb-2"
+                                href="./artigo4.html"><img alt="Lorem ipsum" loading="lazy" width="50" height="50"
+                                    decoding="async" data-nimg="1"
+                                    class="rounded-full object-cover object-top w-10 h-10 aspect-auto mr-1"
+                                    src="../src/assets/Gallery/20220611_165103.jpg">
+                                <li class="hover:text-blue-800">
+                                    <p class="text-sm">A Jornada pela História...</p>
+                                    <p class="text-xs">19 dez, 2023</p>
+                                </li>
+                            </a>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <footer class="text-white pt-8 pb-3 bg-blue-800">
+        <div class="container mx-auto px-8 z-3">
+            <div class="w-full flex flex-col md:flex-row py-6">
+                <div class="flex-1 mb-6 text-white">
+                    <a href="../index.html">
+                        <img class="w-2/5 md:mx-auto justify-start" src="./src/assets/logo-b.png" alt="">
+                    </a>
+                </div>
+
+
+                <div class="md:flex-1 flex-col">
+                    <p class="uppercase  md:mb-6">HOME</p>
+                    <ul class="list-reset mb-6">
+
+                        <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                            <a href="" class="relative before:content-[''] before:absolute before:block before:w-full before:h-[2px] 
+                            before:bottom-0 before:left-0 before:bg-white
+                            before:hover:scale-x-100 before:scale-x-0 before:origin-top-left
+                            before:transition before:ease-in-out before:duration-300">
+                                Quem somos</a>
+                        </li>
+                        <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                            <a href="" class="no-underline   relative before:content-[''] before:absolute before:block before:w-full before:h-[2px] 
+                            before:bottom-0 before:left-0 before:bg-white
+                            before:hover:scale-x-100 before:scale-x-0 before:origin-top-left
+                            before:transition before:ease-in-out before:duration-300">
+                                Obras</a>
+                        </li>
+                        <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                            <a href="" class="no-underline   relative before:content-[''] before:absolute before:block before:w-full before:h-[2px] 
+                            before:bottom-0 before:left-0 before:bg-white
+                            before:hover:scale-x-100 before:scale-x-0 before:origin-top-left
+                            before:transition before:ease-in-out before:duration-300">
+                                Serviços</a>
+                        </li>
+                        <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                            <a href="" class="no-underline   relative before:content-[''] before:absolute before:block before:w-full before:h-[2px] 
+                            before:bottom-0 before:left-0 before:bg-white
+                            before:hover:scale-x-100 before:scale-x-0 before:origin-top-left
+                            before:transition before:ease-in-out before:duration-300">
+                                Blog</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="flex md:flex-1 flex-col">
+                    <p class="uppercase md:mb-6">SEGMENTOS</p>
+                    <ul class="list-reset mb-6 ">
+                        <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                            <a href="#" class="no-underline   relative before:content-[''] before:absolute before:block before:w-full before:h-[2px] 
+                            before:bottom-0 before:left-0 before:bg-white
+                            before:hover:scale-x-100 before:scale-x-0 before:origin-top-left
+                            before:transition before:ease-in-out before:duration-300">Construção</a>
+                        </li>
+                        <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                            <a href="#" class="no-underline   relative before:content-[''] before:absolute before:block before:w-full before:h-[2px] 
+                            before:bottom-0 before:left-0 before:bg-white
+                            before:hover:scale-x-100 before:scale-x-0 before:origin-top-left
+                            before:transition before:ease-in-out before:duration-300">Reforma</a>
+                        </li>
+                        <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                            <a href="#" class="no-underline   relative before:content-[''] before:absolute before:block before:w-full before:h-[2px] 
+                            before:bottom-0 before:left-0 before:bg-white
+                            before:hover:scale-x-100 before:scale-x-0 before:origin-top-left
+                            before:transition before:ease-in-out before:duration-300">Design</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex md:flex-1 flex-col">
+                    <p class="uppercase md:mb-6">A Empresa</p>
+                    <ul class="list-reset mb-6 ">
+                        <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                            <a href="#" class="no-underline   relative before:content-[''] before:absolute before:block before:w-full before:h-[2px] 
+                            before:bottom-0 before:left-0 before:bg-white
+                            before:hover:scale-x-100 before:scale-x-0 before:origin-top-left
+                            before:transition before:ease-in-out before:duration-300"></a>
+                        </li>
+                        <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                            <a href="#" class="no-underline   relative before:content-[''] before:absolute before:block before:w-full before:h-[2px] 
+                            before:bottom-0 before:left-0 before:bg-white
+                            before:hover:scale-x-100 before:scale-x-0 before:origin-top-left
+                            before:transition before:ease-in-out before:duration-300">CNPJ:
+                                00.000.000/0001-00</a>
+                        </li>
+                        <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                            <a href="#" class="no-underline   relative before:content-[''] before:absolute before:block before:w-full before:h-[2px] 
+                            before:bottom-0 before:left-0 before:bg-white
+                            before:hover:scale-x-100 before:scale-x-0 before:origin-top-left
+                            before:transition before:ease-in-out before:duration-300">Telefone: (81) 3343-2904</a>
+                        </li>
+                        <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                            <a href="#" class="no-underline   relative before:content-[''] before:absolute before:block before:w-full before:h-[2px] 
+                            before:bottom-0 before:left-0 before:bg-white
+                            before:hover:scale-x-100 before:scale-x-0 before:origin-top-left
+                            before:transition before:ease-in-out before:duration-300">Email:
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div>
+            <p class="text-center pt-3 pb-2 text-sm"><span> © 2023 • Improtech Protensão
+                    Digital</span>
+                • Todos
+                os direitos reservados.</p>
+        </div>
+    </footer>
+    <div class="fixed bottom-8 right-8 flex-col gap-3 md:flex"><button aria-label="Scroll To Comment"
+            class="rounded-full">
+        </button>
+        <a href="#Home">
+            <button
+                class="rounded-full bg-gray-200 p-2 text-gray-500 transition-all hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-400 dark:hover:bg-gray-600 flex  justify-center">
+                <svg class="h-5 w-5 " viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M3.293 9.707a1 1 0 010-1.414l6-6a1 1 0 011.414 0l6 6a1 1 0 01-1.414 1.414L11 5.414V17a1 1 0 11-2 0V5.414L4.707 9.707a1 1 0 01-1.414 0z"
+                        clip-rule="evenodd">
+                    </path>
+
+                </svg>
+            </button>
+        </a>
+    </div>
+
+    <script src="/src/app.js"></script>
+    <iframe id="netlify-identity-widget" title="Netlify identity widget"
+        style="position: fixed; top: 0; left: 0; border: none; width: 100%; height: 100%; overflow: visible; background: transparent; display: none; z-index: 99; "
+        src="about:blank"></iframe><iframe id="netlify-identity-widget" title="Netlify identity widget"
+        style="position: fixed; top: 0; left: 0; border: none; width: 100%; height: 100%; overflow: visible; background: transparent; display: none; z-index: 99; "
+        src="about:blank"></iframe>
+</body>
